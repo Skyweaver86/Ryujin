@@ -1,0 +1,167 @@
+--
+-- Table structure for table `article`
+--
+
+CREATE TABLE `article` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `title` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `summary` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `category_id` int(11) NOT NULL,
+  `member_id` int(11) NOT NULL,
+  `image_id` int(11) DEFAULT NULL,
+  `published` tinyint(4) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+INSERT INTO `article` (`id`, `title`, `summary`, `content`, `created`, `category_id`, `member_id`, `image_id`, `published`) VALUES
+(1, 'Ferrari: The Prancing Horse', 'A deep dive into Ferrari, the iconic Italian sports car manufacturer.', 'Ferrari S.p.A. is an Italian luxury sports car manufacturer based in Maranello, Italy. Founded by Enzo Ferrari in 1939, the company has produced some of the most iconic and desirable sports cars in the world. Ferrari is known for its Formula 1 racing heritage, powerful engines, and timeless designs. Models like the 488, F8 Tributo, and SF90 Stradale continue to set benchmarks in performance and luxury.', NOW(), 1, 1, 1, 1),
+
+(2, 'Lamborghini: The Raging Bull', 'Exploring Lamborghini, the Italian manufacturer known for its extreme and aggressive sports cars.', 'Lamborghini is an Italian brand and subsidiary of Volkswagen Group known for manufacturing luxury sports cars and SUVs. Founded by Ferruccio Lamborghini in 1963, the company is headquartered in Sant Agata Bolognese, Italy. Lamborghini is famous for its mid-engine layout, aggressive styling, and high-performance vehicles like the Huracan and Urus.', NOW(), 1, 1, 2, 1),
+
+(3, 'Porsche: Engineering Excellence', 'An in-depth look at Porsche, the German sports car brand known for precision engineering.', 'Porsche AG is a German automobile manufacturer specializing in high-performance sports cars, SUVs, and sedans. Founded in 1931 by Ferdinand Porsche, the company is headquartered in Stuttgart, Germany. Porsche is renowned for its iconic 911 series, as well as the Cayenne, Panamera, and the all-electric Taycan. Porsche has a rich motorsport heritage, with numerous victories at Le Mans and other prestigious races.', NOW(), 1, 1, 3, 1),
+
+(4, 'McLaren: Born on the Track', 'Discover McLaren, the British sports car manufacturer with deep Formula 1 roots.', 'McLaren Automotive is a British manufacturer of luxury, high-performance sports and supercars. Founded in 1963 by Bruce McLaren, the company is based in Woking, Surrey, England. McLaren produces iconic models such as the 720S, Artura, and the legendary F1, which was once the fastest production car in the world. McLaren vehicles are known for their lightweight carbon fiber construction and track-focused performance.', NOW(), 1, 1, 4, 1),
+
+(5, 'Bugatti: The Art of Performance', 'A look at Bugatti, the French manufacturer famous for creating the world fastest cars.', 'Bugatti Automobiles S.A.S. is a French high-performance luxury automobile manufacturer. Founded by Ettore Bugatti in 1909, the company is headquartered in Molsheim, Alsace, France. Bugatti is famous for producing record-breaking hypercars such as the Veyron and the Chiron. The Chiron Super Sport 300+ became one of the first production cars to break the 300 mph barrier, cementing Bugatti status as an engineering icon.', NOW(), 1, 1, 5, 1),
+
+(6, 'Aston Martin: British Elegance and Power', 'Exploring Aston Martin, the iconic British brand synonymous with luxury and performance.', 'Aston Martin Lagonda Global Holdings plc is a British independent manufacturer of luxury sports cars and grand tourers. Founded in 1913 by Lionel Martin and Robert Bamford, Aston Martin is headquartered in Gaydon, Warwickshire, England. Known for its association with James Bond, Aston Martin produces iconic models such as the DB11, Vantage, and the DBS Superleggera. The brand blends British craftsmanship with cutting-edge performance.', NOW(), 1, 1, 6, 1),
+
+(7, 'Koenigsegg: Swedish Hypercar Pioneer', 'An introduction to Koenigsegg, the Swedish manufacturer pushing the limits of automotive performance.', 'Koenigsegg Automotive AB is a Swedish manufacturer of high-performance sports cars. Founded in 1994 by Christian von Koenigsegg, the company is headquartered in Angelholm, Sweden. Koenigsegg is known for building some of the fastest and most technologically advanced cars in the world, including the Agera RS, which set a top speed record of 277.9 mph. Their latest model, the Jesko Absolut, is engineered to exceed 300 mph.', NOW(), 1, 1, 7, 1),
+
+(8, 'Pagani: Italian Art Meets Engineering', 'Discover Pagani, the boutique Italian manufacturer known for combining artistry with performance.', 'Pagani Automobili S.p.A. is an Italian manufacturer of sports cars and carbon fiber components. Founded by Horacio Pagani in 1992, the company is based in San Cesario sul Panaro, Italy. Pagani is famous for its handcrafted hypercars such as the Zonda and Huayra, which are renowned for their stunning designs and exceptional performance. Each Pagani vehicle is a work of art, blending aerospace engineering with Italian craftsmanship.', NOW(), 1, 1, 8, 1),
+
+(9, 'Chevrolet Corvette: America Sports Car', 'A tribute to the Chevrolet Corvette, the legendary American sports car with decades of history.', 'The Chevrolet Corvette is a two-door, two-passenger sports car manufactured and marketed by Chevrolet. Introduced in 1953, the Corvette has been America quintessential sports car for over seven decades. The latest C8 generation features a mid-engine layout for the first time, with a 6.2-liter V8 engine producing 490 horsepower. The Corvette Z06 and ZR1 variants push performance to supercar levels at a fraction of the price of European rivals.', NOW(), 1, 1, 9, 1),
+
+(10, 'Lotus: Lightweight Performance', 'An exploration of Lotus, the British brand known for its philosophy of lightweight and agile sports cars.', 'Lotus Cars is a British automotive company that manufactures sports cars. Founded by Colin Chapman in 1948, Lotus is headquartered in Hethel, Norfolk, England. Lotus is famous for its philosophy of adding lightness, creating nimble and driver-focused sports cars such as the Elise, Exige, and the electric Evija hypercar. Colin Chapman engineering innovations have had a lasting impact on both road cars and Formula 1 racing.', NOW(), 1, 1, 10, 1),
+
+(11, 'Alfa Romeo: Italian Passion and Performance', 'A look at Alfa Romeo, the Italian brand with a rich motorsport heritage and stunning designs.', 'Alfa Romeo is an Italian luxury car manufacturer founded in 1910 in Milan, Italy. Known for its passionate approach to performance and design, Alfa Romeo has produced iconic models such as the Giulia GTA, 4C Spider, and the Stelvio Quadrifoglio. The brand has a deep-rooted history in motorsport, having competed in Formula 1 and endurance racing. Today, Alfa Romeo continues to blend Italian flair with modern performance technology.', NOW(), 1, 1, 11, 1),
+
+(12, 'Maserati: The Sound of Speed', 'Exploring Maserati, the Italian grand touring brand famous for its distinctive exhaust note.', 'Maserati S.p.A. is an Italian luxury vehicle manufacturer established in Bologna in 1914. Maserati is known for producing elegant yet powerful grand tourers and sports cars, including the GranTurismo, MC20, and Quattroporte. The brand is famous for its unique and emotional exhaust sound, often described as one of the most beautiful in the automotive world. Maserati has a rich racing history and continues to push boundaries with electrified performance models.', NOW(), 1, 1, 12, 1),
+
+(13, 'Rimac: The Future of Hypercars', 'Discover Rimac Automobili, the Croatian electric hypercar manufacturer redefining performance.', 'Rimac Automobili is a Croatian electric hypercar manufacturer and technology company founded by Mate Rimac in 2009. Based in Sveta Nedelja, Croatia, Rimac has quickly established itself as a pioneer in electric performance vehicles. The Rimac Nevera, their flagship hypercar, produces 1914 horsepower and can accelerate from 0 to 60 mph in just 1.85 seconds, making it one of the fastest production cars ever made. Rimac also supplies electric drivetrain technology to other automakers.', NOW(), 1, 1, 13, 1),
+
+(14, 'Hennessey: American Hypercar Power', 'An introduction to Hennessey Performance, the American manufacturer building record-breaking hypercars.', 'Hennessey Performance Engineering is an American manufacturer of high-performance vehicles founded by John Hennessey in 1991. Based in Sealy, Texas, Hennessey is known for producing some of the most powerful and fastest cars in the world. The Hennessey Venom F5 is designed to exceed 300 mph, powered by a twin-turbocharged 6.6-liter V8 engine producing over 1817 horsepower. Hennessey also offers performance upgrade packages for a wide range of production vehicles.', NOW(), 1, 1, 14, 1),
+
+(15, 'Shelby: The American Legend', 'A tribute to Shelby American, the iconic brand behind some of the most powerful American muscle and sports cars.', 'Shelby American, Inc. is an American automotive manufacturer founded by Carroll Shelby in 1962. Based in Las Vegas, Nevada, Shelby is famous for producing high-performance variants of Ford vehicles, including the legendary Shelby Cobra, Shelby GT500, and Shelby GT350. The Shelby Cobra, with its lightweight body and powerful V8 engine, became one of the most celebrated sports cars in American history. Shelby continues to produce limited-edition, high-performance vehicles today.', NOW(), 1, 1, 15, 1),
+
+(16, 'Ducati: The Italian Thoroughbred', 'A deep dive into Ducati, the Italian motorcycle manufacturer synonymous with performance and style.', 'Ducati Motor Holding S.p.A. is an Italian motorcycle manufacturer founded in 1926 and headquartered in Bologna, Italy. Ducati is renowned for producing high-performance motorcycles featuring the iconic L-twin engine and Desmodromic valve system. Popular models include the Panigale V4, Streetfighter V4, and the Multistrada. Ducati has an impressive MotoGP and World Superbike Championship racing heritage, with multiple championship titles to its name.', NOW(), 2, 1, 16, 1),
+
+(17, 'Kawasaki: The Green Monster', 'Exploring Kawasaki, the Japanese manufacturer behind some of the fastest production motorcycles in the world.', 'Kawasaki Heavy Industries Motorcycle and Engine is a Japanese manufacturer of motorcycles, ATVs, and other motorized products. Founded in 1896 and headquartered in Akashi, Hyogo, Japan, Kawasaki is famous for its Ninja series of supersport motorcycles. The Kawasaki Ninja H2R is one of the most powerful production motorcycles ever made, featuring a supercharged engine producing over 300 horsepower. Kawasaki also competes at the highest levels of superbike and motocross racing worldwide.', NOW(), 2, 1, 17, 1),
+
+(18, 'Yamaha: Precision and Performance', 'Discover Yamaha, the Japanese manufacturer known for building some of the most well-rounded sports motorcycles.', 'Yamaha Motor Company is a Japanese manufacturer of motorcycles, marine products, and other motorized products founded in 1955. Headquartered in Iwata, Shizuoka, Japan, Yamaha is famous for its YZF-R series, particularly the YZF-R1 and YZF-R6. The R1 features a crossplane crankshaft engine derived directly from Yamaha MotoGP M1 race bike. Yamaha has won numerous MotoGP World Championships and is known for producing motorcycles that balance performance, reliability, and rideability.', NOW(), 2, 1, 18, 1),
+
+(19, 'Honda: The Benchmark of Reliability and Speed', 'An exploration of Honda motorcycles, the Japanese giant known for combining reliability with blistering performance.', 'Honda Motor Co., Ltd. is a Japanese multinational manufacturer founded in 1948 by Soichiro Honda. Honda is the world largest motorcycle manufacturer and is headquartered in Minato, Tokyo, Japan. Honda sports motorcycle lineup includes the legendary CBR1000RR-R Fireblade, RC213V-S, and the iconic CB series. Honda has an unparalleled racing history, with more MotoGP and Isle of Man TT victories than any other manufacturer. The Fireblade remains one of the benchmarks in the supersport motorcycle segment.', NOW(), 2, 1, 19, 1),
+
+(20, 'Suzuki: Born to Race', 'A tribute to Suzuki motorcycles, the Japanese brand with a legendary racing history and iconic GSX-R series.', 'Suzuki Motor Corporation is a Japanese multinational manufacturer founded in 1909, headquartered in Hamamatsu, Shizuoka, Japan. Suzuki is renowned for its GSX-R series of supersport motorcycles, which have been a benchmark in the sports bike segment since 1985. The GSX-R1000, GSX-R750, and GSX-R600 are beloved by riders and racers alike for their performance and handling. Suzuki has a proud racing heritage, having won multiple 500cc World Championships with riders like Barry Sheene and Kevin Schwantz.', NOW(), 2, 1, 20, 1),
+
+(21, 'BMW Motorrad: German Engineering on Two Wheels', 'Exploring BMW Motorrad, the German manufacturer known for its innovative and high-performance motorcycles.', 'BMW Motorrad is the motorcycle brand of the BMW Group, founded in 1923 and headquartered in Munich, Germany. BMW Motorrad is famous for its boxer twin engine design, featured in the iconic R-series motorcycles. The S1000RR superbike is BMW flagship sports motorcycle, competing at the highest levels of the World Superbike Championship. BMW Motorrad is also known for its innovative technologies including dynamic traction control, cornering ABS, and semi-active suspension systems.', NOW(), 2, 1, 21, 1),
+
+(22, 'Aprilia: Italian Superbike Excellence', 'A look at Aprilia, the Italian motorcycle brand with an outstanding record in World Superbike and MotoGP.', 'Aprilia is an Italian motorcycle manufacturer founded in 1945 and headquartered in Noale, Veneto, Italy. Aprilia is part of the Piaggio Group and is known for producing high-performance superbikes such as the RSV4 and Tuono V4. The RSV4 has dominated the World Superbike Championship, winning multiple titles. Aprilia also competes in MotoGP with the RS-GP, showcasing its engineering expertise at the pinnacle of motorcycle racing. The brand is celebrated for its cutting-edge electronics and race-derived technology.', NOW(), 2, 1, 22, 1),
+
+(23, 'KTM: Ready to Race', 'Discover KTM, the Austrian motorcycle manufacturer known for its aggressive performance and motorsport success.', 'KTM AG is an Austrian motorcycle manufacturer founded in 1934 and headquartered in Mattighofen, Austria. KTM slogan Ready to Race reflects its motorsport-focused approach to motorcycle manufacturing. The KTM RC 390, Duke 390, and the flagship RC8 are popular among sport and track riders. KTM has achieved remarkable success in off-road racing, winning numerous Dakar Rally titles, and has expanded its presence in MotoGP through its RC16 race bike, scoring multiple victories in recent seasons.', NOW(), 2, 1, 23, 1),
+
+(24, 'Red Bull Racing: The Dominant Force', 'An in-depth look at Red Bull Racing, the Austrian F1 team that has dominated the sport in recent years.', 'Red Bull Racing is an Austrian Formula 1 team founded in 2005 and based in Milton Keynes, United Kingdom. Backed by the Red Bull energy drink company, the team has become one of the most successful in F1 history. Under the technical leadership of Adrian Newey, Red Bull won four consecutive Constructors and Drivers Championships from 2010 to 2013 with Sebastian Vettel. The team achieved further dominance in 2022 and 2023 with Max Verstappen, who secured back-to-back World Championships in dominant fashion.', NOW(), 3, 1, 24, 1),
+
+(25, 'Scuderia Ferrari: The Most Iconic F1 Team', 'Exploring Ferrari Formula 1 team, the oldest and most successful constructor in the history of the sport.', 'Scuderia Ferrari is the racing division of Ferrari and the oldest and most successful team in Formula 1 history. Founded by Enzo Ferrari in 1929 and based in Maranello, Italy, Ferrari has won 16 Constructors Championships and 15 Drivers Championships. Legendary drivers such as Michael Schumacher, Niki Lauda, and Jody Scheckter have driven for Ferrari. The team, known as the Scuderia, holds a special place in motorsport culture and continues to be one of the most supported teams on the F1 grid.', NOW(), 3, 1, 25, 1),
+
+(26, 'Mercedes-AMG Petronas: The Silver Arrows', 'A tribute to Mercedes-AMG Petronas F1 Team, the dominant force that rewrote the record books in the hybrid era.', 'Mercedes-AMG Petronas Formula One Team is a German-British Formula 1 team based in Brackley, United Kingdom. The team entered the modern era of F1 in 2010 and went on to achieve unprecedented success in the hybrid era, winning eight consecutive Constructors Championships from 2014 to 2021. Lewis Hamilton won seven of his record-equalling World Drivers Championships with the team. The Silver Arrows are known for their technical excellence, innovative engineering, and the dominant W-series of cars that set new benchmarks in F1 performance.', NOW(), 3, 1, 26, 1),
+
+(27, 'McLaren F1: The Papaya Spirit', 'Exploring McLaren storied Formula 1 history, from Ayrton Senna to Lando Norris.', 'McLaren Racing is a British Formula 1 team founded by Bruce McLaren in 1963 and based in Woking, Surrey, England. McLaren is one of the most successful teams in F1 history, having won 8 Constructors Championships and 12 Drivers Championships. The team is famous for its iconic partnerships with drivers such as Ayrton Senna, Alain Prost, and Mika Hakkinen. In recent years, McLaren has undergone a resurgence with young talents Lando Norris and Oscar Piastri leading the charge back to the front of the grid.', NOW(), 3, 1, 27, 1),
+
+(28, 'Aston Martin F1: The Green Machine', 'A look at the Aston Martin Aramco F1 Team, the rebranded team aiming to challenge at the front of the grid.', 'Aston Martin Aramco Formula One Team is a British Formula 1 team based in Silverstone, Northamptonshire, England. The team was rebranded as Aston Martin in 2021 after being known as Racing Point and Force India. Backed by Canadian billionaire Lawrence Stroll, the team has invested heavily in a new state-of-the-art factory at Silverstone. With Fernando Alonso joining in 2023, Aston Martin has shown significant progress, regularly competing for podium positions.', NOW(), 3, 1, 28, 1),
+
+(29, 'Williams Racing: A Legacy of Champions', 'Exploring Williams Racing, one of the most successful F1 teams in history now on a journey of revival.', 'Williams Racing is a British Formula 1 team founded by Frank Williams and Patrick Head in 1977, based in Grove, Oxfordshire, England. Williams is one of the most successful teams in F1 history, having won 9 Constructors Championships and 7 Drivers Championships. Legendary drivers such as Nigel Mansell, Alain Prost, Damon Hill, and Jacques Villeneuve have won championships with the team. After a difficult period in recent years, Williams is now under new ownership by Dorilton Capital and is working to return to its former glory.', NOW(), 3, 1, 29, 1),
+
+(30, 'Alpine F1 Team: French Ambition on the Grid', 'Discover Alpine F1 Team, the French constructor representing the Renault Group return to full factory effort.', 'Alpine F1 Team is a French Formula 1 constructor based in Enstone, Oxfordshire, England, with its power unit operations in Viry-Chatillon, France. The team was rebranded from Renault to Alpine in 2021, representing the French Alpine sports car brand. With Fernando Alonso and Esteban Ocon, the team secured its first victory in the modern era at the 2021 Hungarian Grand Prix. Alpine has ambitious plans to challenge for championships, backed by the full resources of the Renault Group and a long-term commitment to F1.', NOW(), 3, 1, 30, 1);
+
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `navigation` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+INSERT INTO `category` (`id`, `name`, `description`, `navigation`) VALUES
+(1, 'Sports Cars', 'Explore the world of high-performance sports cars, supercars, and hypercars from the most iconic manufacturers around the globe.', 1),
+(2, 'Sports Bikes', 'Discover the fastest and most powerful sports motorcycles, from supersport bikes to hypernaked machines from top manufacturers worldwide.', 1),
+(3, 'F1 Teams', 'Follow the latest news, history, and updates on Formula 1 constructor teams competing at the pinnacle of motorsport racing.', 1);
+
+
+--
+-- Table structure for table `image`
+--
+
+CREATE TABLE `image` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `file` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alt` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `image` (`id`, `file`, `alt`) VALUES
+(1,  'ferrari-prancing-horse.jpg',        'Ferrari F8 Tributo in red speeding on a race track'),
+(2,  'lamborghini-raging-bull.jpg',        'Lamborghini Huracan in yellow on an open road'),
+(3,  'porsche-engineering.jpg',            'Porsche 911 GT3 in silver on a mountain road'),
+(4,  'mclaren-born-on-track.jpg',          'McLaren 720S in orange on a circuit track'),
+(5,  'bugatti-art-of-performance.jpg',     'Bugatti Chiron in black and blue at full speed'),
+(6,  'aston-martin-elegance.jpg',          'Aston Martin DB11 in green on a countryside road'),
+(7,  'koenigsegg-hypercar.jpg',            'Koenigsegg Agera RS in white on a closed highway'),
+(8,  'pagani-art-engineering.jpg',         'Pagani Huayra in silver with butterfly doors open'),
+(9,  'corvette-americas-car.jpg',          'Chevrolet Corvette C8 in red on an American highway'),
+(10, 'lotus-lightweight.jpg',              'Lotus Evija electric hypercar in yellow on a test track'),
+(11, 'alfa-romeo-passion.jpg',             'Alfa Romeo Giulia GTA in red on a racing circuit'),
+(12, 'maserati-sound-of-speed.jpg',        'Maserati MC20 in white parked on a scenic road'),
+(13, 'rimac-future-hypercar.jpg',          'Rimac Nevera in dark blue launching from a standstill'),
+(14, 'hennessey-american-power.jpg',       'Hennessey Venom F5 in silver on a straight road'),
+(15, 'shelby-american-legend.jpg',         'Shelby Cobra in blue with white racing stripes on display'),
+(16, 'ducati-italian-thoroughbred.jpg',    'Ducati Panigale V4 in red leaning into a corner on track'),
+(17, 'kawasaki-green-monster.jpg',         'Kawasaki Ninja H2R in green on a drag strip at speed'),
+(18, 'yamaha-precision-performance.jpg',   'Yamaha YZF-R1 in blue and white on a racing circuit'),
+(19, 'honda-reliability-speed.jpg',        'Honda CBR1000RR-R Fireblade in red and black on a track'),
+(20, 'suzuki-born-to-race.jpg',            'Suzuki GSX-R1000 in blue and white cornering on a circuit'),
+(21, 'bmw-motorrad-german.jpg',            'BMW S1000RR in white and blue on a racetrack'),
+(22, 'aprilia-superbike-excellence.jpg',   'Aprilia RSV4 in black leaning aggressively on a circuit'),
+(23, 'ktm-ready-to-race.jpg',              'KTM RC 390 in orange on a track day session'),
+(24, 'redbull-dominant-force.jpg',         'Red Bull Racing RB19 with Max Verstappen at the Monaco Grand Prix'),
+(25, 'ferrari-f1-iconic-team.jpg',         'Scuderia Ferrari SF-23 in red racing at the Italian Grand Prix'),
+(26, 'mercedes-silver-arrows.jpg',         'Mercedes-AMG W14 in silver and black at the British Grand Prix'),
+(27, 'mclaren-f1-papaya.jpg',              'McLaren MCL60 in papaya orange racing at the Singapore Grand Prix'),
+(28, 'astonmartin-f1-green.jpg',           'Aston Martin AMR23 in British racing green at the Spanish Grand Prix'),
+(29, 'Williams Racing_A_Legacy_of_Champions.jpeg', 'Williams FW45 in blue and white racing at the Australian Grand Prix'),
+(30, 'Alpine F1 Team_French_Ambition_on_the_Grid.jpg', 'Alpine A523 in blue, white and red at the French Grand Prix');
+
+
+--
+-- Table structure for table `member`
+--
+
+CREATE TABLE `member` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `forename` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `surname` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL UNIQUE,
+  `password` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `joined` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `picture` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+INSERT INTO `member` (`id`, `forename`, `surname`, `email`, `password`, `joined`, `picture`) VALUES
+(1,  'James',    'Anderson',  'james.anderson@email.com',   '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'james-anderson.jpg'),
+(2,  'Sophie',   'Williams',  'sophie.williams@email.com',  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'sophie-williams.jpg'),
+(3,  'Marcus',   'Thompson',  'marcus.thompson@email.com',  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'marcus-thompson.jpg'),
+(4,  'Emma',     'Clarke',    'emma.clarke@email.com',      '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'emma-clarke.jpg'),
+(5,  'Liam',     'Roberts',   'liam.roberts@email.com',     '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'liam-roberts.jpg'),
+(6,  'Olivia',   'Martinez',  'olivia.martinez@email.com',  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'olivia-martinez.jpg'),
+(7,  'Noah',     'Johnson',   'noah.johnson@email.com',     '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'noah-johnson.jpg'),
+(8,  'Ava',      'Wilson',    'ava.wilson@email.com',       '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'ava-wilson.jpg'),
+(9,  'Ethan',    'Davis',     'ethan.davis@email.com',      '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'ethan-davis.jpg'),
+(10, 'Isabella', 'Taylor',    'isabella.taylor@email.com',  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NOW(), 'isabella-taylor.jpg');
